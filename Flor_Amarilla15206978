@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor Amarilla</title>
+    <style>
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .contenedor {
+            text-align: center;
+            position: relative;
+        }
+        /* Las letras arriba */
+        .texto {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: aparecer 2s ease-in-out forwards;
+        }
+        /* La Flor Amarilla */
+        .flor {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            animation: girar 10s linear infinite;
+        }
+        .centro {
+            width: 40px;
+            height: 40px;
+            background: #8B4513;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 10;
+        }
+        .petalo {
+            width: 30px;
+            height: 80px;
+            background: #FFD700;
+            border-radius: 50px;
+            position: absolute;
+            left: 35px;
+            top: 10px;
+            transform-origin: center bottom;
+        }
+        /* Posicionamiento de pétalos */
+        .p1 { transform: rotate(0deg); }
+        .p2 { transform: rotate(45deg); }
+        .p3 { transform: rotate(90deg); }
+        .p4 { transform: rotate(135deg); }
+        .p5 { transform: rotate(180deg); }
+        .p6 { transform: rotate(225deg); }
+        .p7 { transform: rotate(270deg); }
+        .p8 { transform: rotate(315deg); }
+
+        /* Animaciones automáticas */
+        @keyframes girar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes aparecer {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <!-- Puedes cambiar este texto por el que tú quieras -->
+        <div class="texto">TE QUIERO</div>
+        
+        <div class="flor">
+            <div class="centro"></div>
+            <div class="petalo p1"></div>
+            <div class="petalo p2"></div>
+            <div class="petalo p3"></div>
+            <div class="petalo p4"></div>
+            <div class="petalo p5"></div>
+            <div class="petalo p6"></div>
+            <div class="petalo p7"></div>
+            <div class="petalo p8"></div>
+        </div>
+    </div>
+
+</body>
+</html>
